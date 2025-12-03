@@ -81,7 +81,7 @@ def download_images(url):
 
     # Get URL image pattern. because not all <img> contain slide URL
     for image in images:
-        image_url = image.get("srcset").split("w, ")[-1].split(" ")[0]
+        image_url = image.get("src").split("w, ")[-1].split(" ")[0]
         if image_url.endswith(".jpg"):
             break
 
